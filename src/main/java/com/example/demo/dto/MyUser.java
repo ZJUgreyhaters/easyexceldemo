@@ -12,7 +12,7 @@ public class MyUser extends BaseRowModel {
     @ExcelProperty(value = "名字", index = 0)
     private String name;
 
-    @NumberFormat("#.#####")
+    @NumberFormat("#.#####%")
     @ColumnWidth(40)
     @ExcelProperty(value = "年龄", index = 1)
     private Double age;

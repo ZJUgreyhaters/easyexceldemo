@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 @Api(tags = "ExportFile Controller")
 @RestController
@@ -21,7 +22,7 @@ public class ExportFileController {
     
     @ApiOperation(value = "excel", tags = "excel")
     @GetMapping("/excel")
-    public ResponseBase exportExcel(HttpServletResponse response) {
+    public ResponseBase exportExcel(HttpServletResponse response) throws IOException {
 
         service.exportExcel(response);
 
